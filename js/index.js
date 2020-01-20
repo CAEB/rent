@@ -1,3 +1,5 @@
+const vConsole = new VConsole()
+console.log('Hello world')
 const lmy = [727.5, 695, 700, 601.25, 600].reduce((prev, curr) => prev + curr, 0)
 const yll = [727.5, 695, 700, 0, 600].reduce((prev, curr) => prev + curr, 0)
 const optionL = {
@@ -102,7 +104,9 @@ const app = new Vue({
     const right = echarts.init(document.getElementById('right'))
     left.setOption(optionL)
     right.setOption(optionR)
-    right.on('click', ({ name }) => {
+    right.on('click', ({
+      name
+    }) => {
       this.visible = true
       this.title = `${name}房租截图(点击查看大图)`
       this.imgSrc = `/rent/image/${name}.jpg`
