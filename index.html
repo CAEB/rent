@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.bootcss.com/echarts/4.4.0-rc.1/echarts.min.js"></script>
+  <script src="//v1.vuejs.org/js/vue.min.js"></script>
+  <link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+  <script src="//unpkg.com/iview@1.0.1/dist/iview.min.js"></script>
+  <title>rent</title>
+  <style>
+    #app {
+      display: flex;
+    }
+
+    #left,
+    #right {
+      width: 600px;
+      height: 400px;
+    }
+
+    #left {
+      margin-right: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div id="left" ref="left"></div>
+    <div id="right" ref="right"></div>
+    <Modal :visible.sync="visible" width="350" :style="{ top: '15px' }">
+      <p slot="header">
+        <span>{{title}}</span>
+      </p>
+      <img style="width: 320px;" :src="imgSrc">
+    </Modal>
+  </div>
+</body>
+<script src="js/index.js"></script>
+
+</html>
