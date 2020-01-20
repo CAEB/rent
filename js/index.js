@@ -104,7 +104,7 @@ const app = new Vue({
     right.on('click', ({ name }) => {
       this.visible = true
       this.title = `${name}房租截图`
-      this.imgSrc = `rent/image/${name}.jpg`
+      this.imgSrc = `/rent/image/${name}.jpg`
     })
   },
   methods: {
