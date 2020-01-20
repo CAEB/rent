@@ -104,6 +104,7 @@ const app = new Vue({
     const right = echarts.init(document.getElementById('right'))
     left.setOption(optionL)
     right.setOption(optionR)
+    console.log('created', left)
     right.on('click', ({
       name
     }) => {
