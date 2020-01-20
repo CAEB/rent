@@ -46,7 +46,7 @@ const optionL = {
 }
 const optionR = {
   title: {
-    text: '房租截图'
+    text: '房租截图(点击查看)'
   },
   tooltip: {
     trigger: 'item',
@@ -54,6 +54,7 @@ const optionR = {
   },
   legend: {
     top: 'top',
+    right: 0,
     data: ['1月', '12月', '11月', '10月', '暖气']
   },
   series: [{
@@ -103,7 +104,7 @@ const app = new Vue({
     right.setOption(optionR)
     right.on('click', ({ name }) => {
       this.visible = true
-      this.title = `${name}房租截图`
+      this.title = `${name}房租截图(点击查看大图)`
       this.imgSrc = `/rent/image/${name}.jpg`
     })
   },
